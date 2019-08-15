@@ -89,6 +89,7 @@ body{
 	outline: none;
 	border-radius: 4px;
 	width: 100%;
+	transition: 0.6s;
 }
 .section-header-wraper__form-input input::placeholder{
 color: #FFFFFF;
@@ -108,7 +109,6 @@ color: #FFFFFF;
 	outline: none;
 	border-radius: 4px;
 	cursor: pointer;	
-
 }
 /* ===/ header ===*/
 
@@ -339,8 +339,9 @@ color: #FFFFFF;
 	 width: 60%;
 	 margin: 0 auto;
 }
-.active{
+.active, .section-footer__nav-list-item:hover{
 	color: #FE50A6;
+	transition: 0.4s;
 }
 .section-footer__copyright-and-links__text{
 
@@ -357,5 +358,8 @@ color: #FFFFFF;
 }
 .section-footer__copyright-and-links__helper-list-item + li{
 	margin-left: 25px;
+}
+.section-footer__copyright-and-links__helper-list-item:hover{
+	text-decoration: underline;
 }
 /* === /footer ===*/
