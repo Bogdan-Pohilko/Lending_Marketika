@@ -93,6 +93,9 @@ body{
 .section-header-wraper__form-input input::placeholder{
 color: #FFFFFF;
 }
+.section-header-wraper__form-input input:hover, .section-header-wraper__form-button button:hover{
+	background: rgba(255,255,255,0.6)
+}
 .section-header-wraper__form-button button,.section-plans__item-price-button a,.section-free_button a{
 	border: none;
 	text-decoration: none;
