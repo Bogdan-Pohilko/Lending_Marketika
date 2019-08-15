@@ -1,11 +1,25 @@
 /*font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;*/
+/* === variables ===*/
+:root{
+	--color-white:#fff;
+	--color-main:#414141;
+	--screen-sm:576px;
+	--screen-md:768px;
+	--screen-lg:992px;
+	--screen-xl:1200px;
+}
+/* === /variables ===*/
 /* === common ===*/
 *{
 	box-sizing: border-box;
 }
+.section-outer{
+	padding-left:20px;
+	padding-right: 20px;
+}
 .section-inner{
-	width: 1180px;
+	max-width: 1180px;
 	margin: 0 auto;
 }
 body{
@@ -104,7 +118,7 @@ color: #FFFFFF;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	margin: 0;
-	padding: 16px 52px;
+	padding: 15px 20px;
 	background: linear-gradient(to right, #FE985B, #FE4FA7);
 	outline: none;
 	border-radius: 4px;
