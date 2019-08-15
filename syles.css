@@ -4,12 +4,18 @@ font-family: 'Montserrat', sans-serif;*/
 :root{
 	--color-white:#fff;
 	--color-main:#414141;
+
 	--screen-sm:576px;
 	--screen-md:768px;
 	--screen-lg:992px;
 	--screen-xl:1200px;
+
+	--screen-sm-max:767px;
+	--screen-md-max:991px;
+	--screen-lg-max:1199px;
 }
 /* === /variables ===*/
+
 /* === common ===*/
 *{
 	box-sizing: border-box;
@@ -24,7 +30,7 @@ font-family: 'Montserrat', sans-serif;*/
 }
 body{
 	font-family: 'Lato', sans-serif;
-	color: #414141;
+	color: var(--color-main);
 }
 /* ===/ common ===*/
 
@@ -128,11 +134,11 @@ color: #FFFFFF;
 
 /* === promo ===*/
 .section-promo{
-	padding: 120px 0 120px 0;
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 .section-promo-1{
 	display: flex;
-
 }
 .section-promo-1-content{
 	padding-right: 90px;
@@ -184,6 +190,18 @@ color: #FFFFFF;
 .section-promo-2__item-icon{
 	margin-bottom: 20px;	
 }
+ @media screen and (max-width: 767px){
+	 	.section-promo-1{
+			flex-direction: column;
+			}
+		.section-promo-1-video{
+			order: -1;
+			padding-bottom: 20px;
+		}
+		.section-promo-1-content{
+			padding-right: 0;
+		}
+	}
 /* === /promo ===*/
 
 /* ===  founder ===*/
