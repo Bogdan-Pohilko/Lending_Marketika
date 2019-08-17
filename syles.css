@@ -87,7 +87,6 @@ body{
 	font-weight: lighter;
 	font-size: 18px;
 	line-height: 32px;
-	width: 65%;
 	margin: 0 auto 44px;
 }
 .section-header-wraper__form{
@@ -96,7 +95,7 @@ body{
 }
 .section-header-wraper__form-input{
 	flex: 1;
-	padding-right: 40px;
+	width: 100%;
 }
 .section-header-wraper__form-input input{
 	border: none;
@@ -128,9 +127,32 @@ color: #FFFFFF;
 	background: linear-gradient(to right, #FE985B, #FE4FA7);
 	outline: none;
 	border-radius: 4px;
-	cursor: pointer;	
+	cursor: pointer;
+	flex: 1;
+	width: 100%;
 }
-/* ===/ header ===*/
+
+@media screen and (max-width: 576px){	
+	.section-header-wraper__form{
+		flex-direction: column;
+	}
+	.section-header-wraper__form-input{
+		padding-bottom: 3px;
+	}
+	.section-header-wraper__form-button{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 577px){	
+	.section-header-wraper__form-input{
+		padding-right: 40px;
+	}
+	.section-header-wraper__subtitle{
+		width: 65%;
+	}
+}
+
+/* ===/ header ===*
 
 /* === promo ===*/
 .section-promo{
@@ -141,7 +163,6 @@ color: #FFFFFF;
 	display: flex;
 }
 .section-promo-1-content{
-	padding-right: 90px;
 	flex-basis: 50%;
 }
 .section-promo-1-content__title{
@@ -183,14 +204,14 @@ color: #FFFFFF;
 	border-top: 1px solid #e2e2e2;
 	text-align: center;
 }
-
 .section-promo-2__item + .section-promo-2__item{
 	margin-left: 40px;
 }
+
 .section-promo-2__item-icon{
 	margin-bottom: 20px;	
 }
- @media screen and (max-width: 767px){
+@media screen and (max-width: 767px){
 	 	.section-promo-1{
 			flex-direction: column;
 			}
@@ -199,9 +220,23 @@ color: #FFFFFF;
 			padding-bottom: 20px;
 		}
 		.section-promo-1-content{
-			padding-right: 0;
+			padding-right: 0px;
 		}
 	}
+@media screen and (min-width: 768px){
+		.section-promo-1-content{
+			padding-right: 90px;
+		}
+	}
+@media screen and (max-width: 576px){	
+	.section-promo-2__item + .section-promo-2__item{
+			margin-left: 0px;
+			padding-top: 30px;
+		}
+		.section-promo-2{
+			flex-direction: column;
+		}
+}
 /* === /promo ===*/
 
 /* ===  founder ===*/
@@ -233,6 +268,18 @@ color: #FFFFFF;
 	font-size: 20px;
 	line-height: 29px;
 }
+@media screen and (max-width: 767px){
+	.section-founder_content{
+		order: -1;
+	}
+	.section-inner{
+		flex-direction: column;
+	}
+	.section-founder_img{
+		padding-top: 30px;
+	}
+
+}
 /* === /founder ===*/
 
 /* === plans ===*/
@@ -251,8 +298,7 @@ color: #FFFFFF;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 300;
-	width: 50%;
-	margin: 0 auto 80px;
+	margin-bottom: 80px;
 	color: #6C6C6C;
 }
 .section-plans__list{
@@ -297,6 +343,19 @@ color: #FFFFFF;
 	border: 1px solid #979797;
 	background: #fff;
 }
+@media screen and (max-width: 576px){
+	.section-plans__list{
+	flex-direction: column;
+	}
+	
+}
+@media screen and (min-width: 991px){
+	.section-plans__text{
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+	}
+}
 /* === /plans ===*/
 
 /* === free ===*/
@@ -322,15 +381,24 @@ color: #FFFFFF;
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: 300;
-	width: 50%;
-	margin: 0 auto;
 	padding-bottom: 40px;
 }
 .section-free_button a{
 	color: #414141;
 	background: #fff;
-	display: inline-block;
 }
+@media screen and (max-width: 991px){
+		.section-free_description{
+			width: 100%;
+		}
+}
+@media screen and (min-width: 992px){
+		.section-free_description{
+			width: 50%;
+			margin: 0 auto;
+		}
+}
+
 /* === /free ===*/
 
 /* === footer ===*/
@@ -361,15 +429,10 @@ color: #FFFFFF;
 	text-transform: uppercase;
 
 }
-.section-footer__nav-list-item + li{
-	margin-left: 100px;
-}
 .section-footer__copyright-and-links{
 	 display: flex;
 	 justify-content: space-between;
 	 padding-bottom: 93px;
-	 width: 60%;
-	 margin: 0 auto;
 }
 .active, .section-footer__nav-list-item:hover{
 	color: #FE50A6;
@@ -393,5 +456,31 @@ color: #FFFFFF;
 }
 .section-footer__copyright-and-links__helper-list-item:hover{
 	text-decoration: underline;
+}
+@media screen and (min-width: 1199px){
+		.section-footer__copyright-and-links{
+			 width: 60%;
+			 margin: 0 auto;
+		}
+}
+@media screen and (min-width: 768px){
+	.section-footer__nav-list-item + li{
+		margin-left: 100px;
+	}
+}
+@media screen and (max-width: 767px){
+	.section-footer__nav-list{
+		flex-direction: column;
+	}
+	.section-footer__nav-list-item{
+		margin-bottom: 20px;
+	}
+	.section-footer__copyright-and-links{
+		flex-direction: column;
+	}
+	.section-footer__copyright-and-links__helper-list{
+		display: inline-flex;
+		margin-top: 20px;
+	}
 }
 /* === /footer ===*/
